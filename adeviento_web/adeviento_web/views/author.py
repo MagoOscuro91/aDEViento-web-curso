@@ -26,7 +26,7 @@ def author() -> rx.Component:
             ),
             rx.vstack( #6# Creamos un vstack dentro de este hstack superior.
                 rx.text(
-                    f"Soy ingeniero de software desde hace casi {experience()} año."
+                    f"Soy desarrollador de software junior desde hace casi {experience()} año."
                 ), #6# Aqui moure pone rx.span().
                 rx.text( #T#6# Arreglar que estos 3 textos sean 1.
                     "En 2023 comencé a divulgar contenido sobre programación y desarrollo de software en redes sociales como ", #T#6# Arreglar que estos 3 textos sean 1.
@@ -52,11 +52,11 @@ def author_buttons() -> rx.Component:
     return rx.box( #6# Lo vamos a meter en un box.
         button( #6# Boton nuestro que recive dos parametros.
             "YouTube", #6# icon
-            constants.YOUTUBE_URL #6# Url.
+            constants.MI_YOUTUBE #6# Url.
         ),
         button(
             "Twitch",
-            constants.TWITCH_URL
+            constants.TWITCH_MOURE
         ),
         button(
             "Discord",

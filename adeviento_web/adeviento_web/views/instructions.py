@@ -24,7 +24,7 @@ def instructions() -> rx.Component:
             rx.text("* Al dia siguiente realizaré el sorteo de forma pública en directo desde Twitch y compartiré el ganador en la web y en Twitter/X. En caso de que no pueda hacer directo, publicaré un video con el resultado del sorteo."), #E#5# Aqui moure pone rx.span().
             button(
                 "Twitch", #5# Primer parametro que recibe nuestro boton css es el "nombre".
-                constants.TWITCH_URL #5# Segundo parametro "url" de twitch de nuestras constantes.
+                constants.TWITCH_MOURE #5# Segundo parametro "url" de twitch de nuestras constantes.
             ), #5# Un boton que emos creado.
             rx.text("* ¡Vuelta a empezar! Publicaré un nuevo regalo y comenzará de nuevo el proceso."), #E#5# Aqui moure pone rx.span().
             class_name="nes-container is-dark with-title", #5# Vamos a darle al box el estilo container de nes.css para el relieve.

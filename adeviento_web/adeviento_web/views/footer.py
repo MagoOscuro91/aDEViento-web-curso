@@ -16,7 +16,7 @@ def footer() -> rx.Component:
                 "Creado con magia y ",
                 rx.box(class_name="nes-icon is-small heart"), #4# Para meter de nes.css el corazón en medio del texto metemos un box con el class-name sin mas.
                 " por MagoOscuro91",
-                href=constants.MAGO_OSCURO91_URL, #4# Linkeamos la url deseada en este caso seria a nuestra pagina personal.
+                href=constants.MI_REPO, #4# Linkeamos la url deseada en este caso seria a nuestra pagina personal.
                 is_external=True, #4# La abrimos en una nueva pestaña.
                 margin_bottom=Size.SMALL.value, #4# Vamos a darle un margen inferior.
                 font_size=Size.DEFAULT.value, #4# Vamos a estilar directamente aqui el texto, tamaño de fuente.

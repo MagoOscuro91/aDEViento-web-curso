@@ -25,15 +25,15 @@ def navbar() -> rx.Component: #2# Lo vamos a meter en un horizontal stack dentro
             rx.spacer(), #2# Queremos que empuje todo a la iz para esp usamos spacer.
             link_icon( #2# Vamos a pintar un link_icon con nuestra funcion que crea botones de la libreria nes.css
                 "youtube", #2# Recive dos parametros el nombre del icono a pintar.
-                constants.YOUTUBE_URL #2# Y la url que le queremos asignar.Las url las vamos a anotar todas en un fichero que se llama constantes (en la raiz del proyecto dice moure(adeviento_web(la mayusculas no))) para tenerlas accesibles.
+                constants.MI_YOUTUBE #2# Y la url que le queremos asignar.Las url las vamos a anotar todas en un fichero que se llama constantes (en la raiz del proyecto dice moure(adeviento_web(la mayusculas no))) para tenerlas accesibles.
             ),
             link_icon( #2# Vamos a montar otro boton simplemente copiando y cambiando los parametros.
                 "twitch", #2# Tenemos uno que se llama twitch para TWITCH.
-                constants.TWITCH_URL #2# Tenemos una url de twitch en nuestro fichero constantes.
+                constants.TWITCH_MOURE #2# Tenemos una url de twitch en nuestro fichero constantes.
             ),
             link_icon(
                 "github", #2# Icono de la libreria nes.css.
-                constants.GITHUB_URL #2# Url.
+                constants.REPO_WEB #2# Url.
             ),
             width="100%" #2# Vamos a darle un tamaño al vstack como es un tamaño estandar lo escribimos sin mas.
         ),

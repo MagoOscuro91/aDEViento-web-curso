@@ -39,8 +39,24 @@ Para lanzar la build ".\/build.bat".
 
 6 Despues de lanzar esta build y que todo a ido correctamente actualizamos o subimos el repo (GitHub).
 
-Para subir el repositorio:
-*curso de github.
+Para subir el repositorio (curso de github):
+Lo primero es instalar git arbimos desde la busqueda windows cmd y con "git --version" veremos la version.
+Si tenemos la version correcta tenemos que dar un email y un nombre desde la ruta C:\Users\jonan en mi caso.
+*git config --global user.name "Jonathan" | Nombre.
+*git config --global user.email "Jonathan@gmail.com" | Email.
+Creamos la carpeta del repo con esta convencion Este-es-mi-nuevo-repo y escribimos cmd en la ruta para abrirla desde la terminal.
+*git init. | Para iniciar git en la carpeta (se crea la carpeta oculta .git).
+*code . | Abrimos en vscode pero en este caso no lo aremos.
+*git status | Para ver el estado (si emos modificado algo tendremos que añadirlo).
+*git add . | Para agregar todos los archivos ("git add index.html" para un archivo).
+*git commit -m "Mensje de progreso" | Actualizamos con un mensaje el progreso.
+*git status | Para ver el estado ((6:30)si es tree clean ya podemos hacer un push).
+(11:30)Creamos nuestra cuenta de GitHub si no la tenemosy vamos a repositorios.
+Creamos un nuevo repo con el nombre privado o publico en este caso publico.
+En la pantalla despues de crear el repo nos daran el link para conectar el repo local con el repo remoto.
+*git remote add origin https://github.com/MagoOscuro91/aDEViento-web-curso.git | git add remote origin "linkremoto".
+*git push origin master | Para subir el repo (la rama master).
+Si tenemos algun error es posible que tengamos que logearnos desde la terminal otra vez.
 
 Para Actualizar el repositorio:
 *git status | para ver el estado del repositorio.
@@ -53,5 +69,28 @@ Para Actualizar el repositorio:
 Para desplegar en vercel entramos y nos creamos una cuenta yo lo e echo con mi github.
 Añadimos nuevo proyecto conectados con github.
 Instalamos la aplicacion de vercel en github dando los permisos necesarios a nuestro proyecto.
+Lo importamos y damos un nombre al proyecto de vercel.
+Root Directory pinchamos y decimos lo que queremos desplegar en este caso public.
+Si tubieramos variables de entorno podriamos configurarlas y mucho mas para otro curso de vercel.
+Desplegamos! Congratulations!! ya podemos entrar al link de nuestra web.
+Podemos modificar el dominio una vista previa etc pero continuamos al panel.
+En github tenemos a la derecha Deployments donde tenemos el historial de desplegues.
 
+8 Para realizar cambios actualizamos el repo primero con la build lanzada.
+*git status | para ver el estado del repositorio.
+*git add . | Para añadir todo lo que se modifico.
+*git commit -m "Mensaje de la actualizacion" | Actualizamos los cambios con un mensaje.
+*git status | Otra vez para ver el estado.
+*git push origin master | Para subir a GitHub.
+Una vez actualizado el repo vercel deveria realizar otro delpoy que se refleja 
+en el historial deploiments del repo y nuestro proyecto en vercel.
+Cada push en main vercel actualiza la web.
 
+9 Para cambiar el dominio entramos en settings domains y añadimos el dominio custom.
+Nos dara instrucciones de como montar esto en nuestro propio dnss pinchamos en add con la 1ª opcion.
+Ahora tenemos que configurar nuestro dnss para que apunte a nuestra web en la pagina de nuestro proveedor.
+Creamos el registro de tipo A apuntando a "" y si ya esiste lo borramos todo.
+Type: A-Address.record, Host: @, Answer: 76.76.21.21, TTL: 600 (el que este por defecto).
+Creamos el registro de tipo CNAME apuntando a "" esto tarda asta 24h en algunos casos.
+Type: CNAME-Canonical name record, Host: www, Answer: cnmae.vercel-dns.com, TTL: 600 (defecto).
+Una vez termine el proceso ya tendriamos nuestra pagina en nuestro dominio custom.

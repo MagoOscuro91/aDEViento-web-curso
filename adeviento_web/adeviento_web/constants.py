@@ -11,5 +11,9 @@ GITHUB_PERSONAL_URL = "https://github.com/MagoOscuro91" #P# Mi github oscuro (ba
 ADEVIENTO_HASHTAG_URL = "https://twitter.com/search?q=elon%20musk%20marihuana&src=typed_query"
 TWITTER_URL = "https://twitter.com"
 DISCORD_URL = "https://discord.gg/mouredev"
+REPO_WEB = "https://github.com/MagoOscuro91/aDEViento-web-curso"
+MI_REPO = "https://github.com/MagoOscuro91"
+MI_YOUTUBE = "https://www.youtube.com/channel/UCSreSq8_KxuME4T7aQlgQHw"
+TWITCH_MOURE = "https://www.twitch.tv/mouredev"
 
 VERSION = "3.0.0"

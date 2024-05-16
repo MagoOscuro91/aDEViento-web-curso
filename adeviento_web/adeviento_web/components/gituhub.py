@@ -28,7 +28,7 @@ def github() -> rx.Component:
         rx.box(
             class_name="nes-octocat animate" #9# El pixel art.
         ),
-        href=constants.GITHUB_REPO,
+        href=constants.REPO_WEB,
         is_external=True, #9# Abre en pestaña nueva.
         align_items="end", #9# Alinea los items.
         display="flex", #9# 
