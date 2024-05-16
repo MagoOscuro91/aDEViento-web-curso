@@ -1,0 +1,57 @@
+                                    Deploy
+
+1 En el fichero gitignore añadimos .venv para no subir a github el entorno virtual y demas cosas.
+
+2 Vamos a subir a github el proyecto para que vercel coja la carpeta "public" de nuestra web estatica sin backend.
+
+3 Pero antes ejecutaremos "reflex export --frontend-only" que nos dara un archivo comprimido lo descomprimimos "unzip archivo.zip" (linux).
+
+4 Nombramos la carpeta como "public" y borramos el zip rm -f archivo.zip (linux).
+
+5 Todo esto lo vamos a crear en un ejecutable para automatizar el proceso de produccion.
+Creamos un archivo al lado del gitignore con el nombre build.sh (linux) build.bat(windows).
+
+Los comandos para linux son los siguientes:
+*source .venv/bin/activate | Activamos el entorno virtual. 
+*pip install --upgrade pip | Aactualizamos el gestor de paquetes pip.
+*pip install -r requirements.txt | Instalamos los requerimientos.
+*reflex init | Iniciamos reflex para que genere todo de nuevo.
+*reflex export --frontend-only | En este caso exportamos solo el frontend.
+*rm -fr public | Borramos la carpeta public si es que existe.
+*unzip frontend.zip -d public | Descomprimimos el zip con el nombre public.
+*rm -f frontend.zip | Borramos el archivo.zip generado.
+*deactivate | Desactivamos el entorno virtual.
+
+Para lanzar la build "sh build.sh" (comprobar si es "sh /build.sh").
+
+Los comandos para windows son los siguientes:
+*call .venv\Scripts\Activate | Activamos el entorno virtual.
+*pip install --upgrade pip | Aactualizamos el gestor de paquetes pip.
+*pip install -r requirements.txt | Instalamos los requerimientos.
+*reflex init | Iniciamos reflex para que genere todo de nuevo.
+*reflex export --frontend-only | En este caso exportamos solo el frontend.
+*rmdir /s /q public | Borramos la carpeta public si es que existe.
+*powershell Expand-Archive -Path frontend.zip -DestinationPath public | Descomprimimos el zip con el nombre public.
+*del /f frontend.zip | Borramos el archivo.zip generado.
+*call .venv\Scripts\Deactivate | Desactivamos el entorno virtual.
+
+Para lanzar la build ".\/build.bat".
+
+6 Despues de lanzar esta build y que todo a ido correctamente actualizamos o subimos el repo (GitHub).
+
+Para subir el repositorio:
+*curso de github.
+
+Para Actualizar el repositorio:
+*git status | para ver el estado del repositorio.
+*git add . | Para añadir todo lo que se modifico.
+*git commit -m "Mensaje de la actualizacion" | Actualizamos los cambios con un mensaje.
+*git status | Otra vez para ver el estado.
+*git push origin master | Para subir a GitHub.
+
+7 La carpeta public es la que queremos desplegar en vercel https://vercel.com/ .
+Para desplegar en vercel entramos y nos creamos una cuenta yo lo e echo con mi github.
+Añadimos nuevo proyecto conectados con github.
+Instalamos la aplicacion de vercel en github dando los permisos necesarios a nuestro proyecto.
+
+
